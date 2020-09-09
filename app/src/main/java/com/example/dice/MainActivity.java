@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void rollDice()
     {
         int randomNumber = rng.nextInt(20) + 1;
-
-
 
         imageViewDice = findViewById(R.id.image_view_dice);
         TextView words = findViewById(R.id.critical);
