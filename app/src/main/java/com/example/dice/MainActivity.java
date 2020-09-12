@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     {
         int randomNumber = rng.nextInt(20) + 1;
 
+        MediaPlayer critHit = MediaPlayer.create(this, R.raw.firework);
+        MediaPlayer critFail = MediaPlayer.create(this, R.raw.toy);
+
+
         imageViewDice = findViewById(R.id.image_view_dice);
         TextView words = findViewById(R.id.critical);
         switch(randomNumber)
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 imageViewDice.setImageResource(R.drawable.dice1);
                 words.setText("Critical Miss!");
+                critFail.start();
                 break;
             case 2:
                 imageViewDice.setImageResource(R.drawable.dice2);
@@ -119,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             case 20:
                 imageViewDice.setImageResource(R.drawable.s20);
                 words.setText("Critical Hit!");
+                critHit.start();
                 break;
         }
     }
