@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         MediaPlayer critHit = MediaPlayer.create(this, R.raw.firework);
         MediaPlayer critFail = MediaPlayer.create(this, R.raw.toy);
+        MediaPlayer roll = MediaPlayer.create(this, R.raw.boop);
 
+        roll.start();
 
         imageViewDice = findViewById(R.id.image_view_dice);
         TextView words = findViewById(R.id.critical);
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 imageViewDice.setImageResource(R.drawable.dice1);
                 words.setText("Critical Miss!");
+
                 critFail.start();
                 break;
             case 2:
