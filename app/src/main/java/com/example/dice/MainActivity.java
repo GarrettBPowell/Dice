@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer critHit = MediaPlayer.create(this, R.raw.firework);
         MediaPlayer critFail = MediaPlayer.create(this, R.raw.toy);
         MediaPlayer roll = MediaPlayer.create(this, R.raw.boop);
+
 
         roll.start();
 
